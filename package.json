@@ -1,0 +1,23 @@
+{
+  "name": "school-routine-manager",
+  "version": "1.0.0",
+  "description": "স্কুলের ৬-১০ শ্রেনীর জন্য মাস্টার রুটিন ম্যানেজমেন্ট সফটওয়্যার",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "xlsx": "^0.18.5",
+    "html2pdf.js": "^0.10.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "vite": "^4.3.0",
+    "eslint": "^8.40.0"
+  }
+}
