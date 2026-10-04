@@ -1,0 +1,292 @@
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1a1a1a;
+  background: #f5f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #eef2f7;
+}
+
+button, input, select {
+  font: inherit;
+}
+
+.app {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.topbar {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.topbar h1 {
+  margin: 0 0 16px;
+  color: #0969da;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tabs button {
+  background: #e9edf5;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.tabs button:hover {
+  background: #d0d7e8;
+}
+
+.tabs button.active {
+  background: #0969da;
+  color: white;
+}
+
+.content {
+  display: block;
+}
+
+.panel {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  padding: 20px;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.panel-header h2 {
+  margin: 0;
+  color: #0969da;
+}
+
+button {
+  background: #0969da;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background: #0860ca;
+}
+
+button.danger {
+  background: #dd3b3b;
+}
+
+button.danger:hover {
+  background: #cc2626;
+}
+
+.table {
+  display: grid;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  background: #f9fbff;
+  border-radius: 8px;
+}
+
+.row.header {
+  font-weight: 700;
+  color: #0969da;
+  background: #eef4ff;
+  border-bottom: 2px solid #0969da;
+}
+
+.row input, .row select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d9dee7;
+  background: #fff;
+  font-size: 14px;
+}
+
+.row input:focus, .row select:focus {
+  outline: none;
+  border-color: #0969da;
+  box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.1);
+}
+
+.assign-table .row {
+  grid-template-columns: 1.2fr 1.5fr 1.5fr 0.8fr 0.8fr 0.8fr;
+}
+
+.generator-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #f9fbff;
+  border-radius: 10px;
+}
+
+.generator-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 600;
+  color: #0969da;
+}
+
+.generator-grid input {
+  padding: 10px 12px;
+  border: 1px solid #d9dee7;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.generator-grid input:focus {
+  outline: none;
+  border-color: #0969da;
+  box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.1);
+}
+
+.routine-preview {
+  margin-top: 20px;
+}
+
+.routine-preview h3 {
+  color: #0969da;
+  margin-top: 0;
+}
+
+.routine-table {
+  overflow-x: auto;
+}
+
+.routine-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.routine-table th,
+.routine-table td {
+  border: 1px solid #d9dee7;
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.routine-table th {
+  background: #eef4ff;
+  font-weight: 700;
+  color: #0969da;
+}
+
+.routine-table tr:nth-child(even) {
+  background: #f9fbff;
+}
+
+.routine-table tr:hover {
+  background: #e9eef7;
+}
+
+.download-actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.print-table {
+  margin-top: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #d9dee7;
+}
+
+@media print {
+  .topbar,
+  .panel-header button,
+  .download-actions {
+    display: none;
+  }
+
+  .routine-table {
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .assign-table .row {
+    grid-template-columns: 1fr;
+  }
+
+  .generator-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app {
+    padding: 12px;
+  }
+
+  .topbar {
+    padding: 12px;
+  }
+
+  .panel {
+    padding: 12px;
+  }
+
+  .tabs {
+    gap: 6px;
+  }
+
+  .tabs button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
